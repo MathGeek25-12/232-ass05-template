@@ -1,6 +1,9 @@
 
 #include <stdio.h>
 
+#include <iostream>
+#include <format>
+
 #ifndef UNITY_H
 #define UNITY_H
 #include "unity.h"
@@ -41,8 +44,35 @@ void tearDown(void) {}
 // ============================================================
 // Main Test Runner
 // ============================================================
+
+// // int member named 'i'
+// // double member named'd' 
+// class Node{
+//     public:    int value;
+//     public:    Node * nextPtr;
+// };
+
+// template <typename T>
+// class classNodeT{
+//     public: T value;
+//     public: classNodeT * classnodeT;
+// };
+
 int main(void) 
 {
+    // Node node;
+    // node.value = 5;
+    // node.nextPtr = NULL;
+
+    // classNodeT<int> nodeT;
+    // nodeT.value = 5;
+    // classNodeT<std::string> nodeT2;
+
+    // nodeT2.value = "hello world";
+    // std::cout << nodeT.value << std::endl;
+    // std::cout << nodeT.value << std::endl;
+
+
     UNITY_BEGIN();
 
     // ========== STAGE 0 ==========

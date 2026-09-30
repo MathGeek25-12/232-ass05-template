@@ -2,7 +2,7 @@
 // CSCI 232 Assignment 05 – Evolution of Data Structures
 // Student Implementation
 // ============================================================
-// Author: [Your Name Here]
+// Author: Amelia Fladager
 // ============================================================
 
 #include "code.hpp"
@@ -21,8 +21,25 @@
 /// default -> "unknown"
 
 std::string printLegacyData(LegacyData data, char type) {
-    // TODO: Implement switch/case for 'i', 'd', 'c' and default case
-    return "";
+    std::string result = "unknown";
+
+    if(type == 'i'){
+        result = std::format("{0}", data.i);
+        return result;
+    }
+
+    if(type == 'd'){
+        result = std::format("{0}", data.d);
+        return result;
+    }
+
+    if(type == 'c'){
+        if(data.cPtr != NULL){
+            result = std::format("{0}", data.cPtr);
+        }
+    }
+    return result;
+
 }
 
 // ============================================================
