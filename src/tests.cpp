@@ -32,9 +32,12 @@ void test_printLegacyData_double(void)
 /// Call createTwoStructNodes().
 /// Verify head->value contains int 5 with type 'i', and head->nextPtr->value contains double ~3.14 with type 'd'.
 /// Clean up allocated memory.
-void test_createTwoStructNodes_links_correctly(void) 
+void test_createTwoStructNodes_links_correctly(void)
 {
-    TEST_ASSERT_TRUE_MESSAGE(0, "TODO: Implement this test");
+    structNode* LinkedNodes = createTwoStructNodes();
+    TEST_ASSERT_EQUAL(5, LinkedNodes);
+    TEST_ASSERT_EQUAL(3.14, LinkedNodes);
+    
 }
 
 // ============================================================
