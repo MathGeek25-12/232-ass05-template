@@ -109,9 +109,9 @@ classNode* createTwoClassNodes() {
     LegacyData Data2; 
     Data2.d = 3.14;
 
-    Node1 -> nextPtr = Node2;
-    Node2 -> nextPtr = nullptr;
-    return Node1;
+    //Node1 -> nextPtr = Node2;
+    //Node2 -> nextPtr = nullptr;
+    //return Node1;
 }
 
 // ============================================================
@@ -123,6 +123,9 @@ classNodeT<int>* createTwoTemplateNodes() {
     // TODO: Instantiate classNodeT<int> nodes using new, link them, and return head
     classNodeT<int> Node1 = 5;
     classNodeT<int> Node2 = 3;
+
+    //Node1 -> nextPtr = Node2;
+    //Node2 -> nextPtr = Node1;
     return nullptr;
 }
 
@@ -138,9 +141,8 @@ LinkedList::LinkedList() {
 
     structNode* head = new structNode;
     LegacyData head;
-    head.i = 0;
 
-
+    return;
 
 }
 

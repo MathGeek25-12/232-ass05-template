@@ -37,7 +37,7 @@ void test_createTwoStructNodes_links_correctly(void)
     structNode* LinkedNodes = createTwoStructNodes();
     TEST_ASSERT_EQUAL(5, LinkedNodes);
     TEST_ASSERT_EQUAL(3.14, LinkedNodes);
-    
+    delete &LinkedNodes;
 }
 
 // ============================================================
@@ -49,9 +49,14 @@ void test_createTwoStructNodes_links_correctly(void)
 /// Clean up allocated memory.
 void test_createTwoClassNodes_links_correctly(void) 
 {
-    classNodeT NodeT = createTwoClassNodes();
-    TEST_ASSERT_EQUAL(5, NodeT);
-    free(&NodeT);
+    classNodeT Node1 = createTwoClassNodes();
+    classNodeT Node2 = createTwoClassNodes();
+
+    TEST_ASSERT_EQUAL(5, &Node1);
+    TEST_ASSERT_EQUAL(5, &Node2);
+
+    delete &Node1;
+    delete &Node2;
 }
 
 // ============================================================
@@ -63,7 +68,14 @@ void test_createTwoClassNodes_links_correctly(void)
 /// Clean up allocated memory.
 void test_createTwoTemplateNodes_links_correctly(void) 
 {
-    TEST_ASSERT_TRUE_MESSAGE(0, "TODO: Implement this test");
+    classNodeT Node1 = createTwoTemplateNodes();
+    classNodeT Node2 = createTwoTemplateNodes();
+    
+    TEST_ASSERT_EQUAL(5, &Node1);
+    TEST_ASSERT_EQUAL(3, &Node2);
+
+    delete &Node1;
+    delete &Node2;
 }
 
 // ============================================================
