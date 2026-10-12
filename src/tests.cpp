@@ -49,7 +49,9 @@ void test_createTwoStructNodes_links_correctly(void)
 /// Clean up allocated memory.
 void test_createTwoClassNodes_links_correctly(void) 
 {
-    TEST_ASSERT_TRUE_MESSAGE(0, "TODO: Implement this test");
+    classNodeT NodeT = createTwoClassNodes();
+    TEST_ASSERT_EQUAL(5, NodeT);
+    free(&NodeT);
 }
 
 // ============================================================
